@@ -68,10 +68,13 @@ public class Zamowienie {
     public void wyswietlSzczegoly(){
         System.out.println("Id:"+this.id);
         System.out.println("Klient:"+this.klient);
-        System.out.println("Produkty:"+this.produkty);
-        System.out.println("Ilosci:"+this.ilosci);
         System.out.println("DataZamowienia:"+this.dataZamowienia);
         System.out.println("Status:"+this.status);
+
+        for (int i = 0; i < produkty.length; i++) {
+            System.out.println("- " + produkty[i].getNazwa() + " x" + ilosci[i] + " = " + produkty[i].getCena() * ilosci[i] + " zł");
+        }
+
 
     }
 }
