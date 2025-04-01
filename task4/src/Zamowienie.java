@@ -60,21 +60,20 @@ public class Zamowienie {
     public void zastosujZnizke(){
         if(klient.getCzyStaly()){
             double nowaWartoscZamowienia = obliczWartoscZamowienia()*0.9;
-            System.out.println("Nowa wartość zamówienia" + nowaWartoscZamowienia);
+            System.out.println("Nowa wartość zamówienia: " + nowaWartoscZamowienia+"zł");
         }else {
             System.out.println("Brak zniżki");
         }
     }
     public void wyswietlSzczegoly(){
         System.out.println("Id:"+this.id);
-        System.out.println("Klient:"+this.klient);
+        System.out.println("Klient:"+klient.getImie()+" "+klient.getNazwisko());
         System.out.println("DataZamowienia:"+this.dataZamowienia);
         System.out.println("Status:"+this.status);
 
         for (int i = 0; i < produkty.length; i++) {
             System.out.println("- " + produkty[i].getNazwa() + " x" + ilosci[i] + " = " + produkty[i].getCena() * ilosci[i] + " zł");
         }
-
-
+        System.out.println("Wartość całego zamówienia:"+obliczWartoscZamowienia()+"zł");
     }
 }

@@ -59,7 +59,7 @@ public class SklepKomputerowy {
     }
 
     public void wyswietlZamowieniaKlienta(int idKlient){
-        for(int i = 0; i<liczbaKlientow; i++){
+        for(int i = 0; i<liczbaZamowien; i++){
             if(zamowienia[i].getKlient().getId() == idKlient){
                 zamowienia[i].wyswietlSzczegoly();
             }
